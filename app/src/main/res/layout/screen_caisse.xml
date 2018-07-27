@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="false"
+    android:background="#adabab"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topSection"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:background="#E4210F"
+            android:gravity="center"
+            android:text="BIIIM"
+            android:textColor="#ffffff"
+            android:textSize="70sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/singleInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/textView_TR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="Tickets Restaurant"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/editText_TR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789.+*"
+            android:ems="10"
+            android:hint="0.0"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal|numberSigned"
+            android:textAlignment="center" />
+
+
+        <TextView
+            android:id="@+id/textView_Cb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="Cartes bancaires"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/editText_Cb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789.+*"
+            android:ems="10"
+            android:hint="0.0"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal|numberSigned"
+            android:textAlignment="center" />
+
+
+        <TextView
+            android:id="@+id/textView_Depenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="Depenses"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/editTxt_Depenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789.+*"
+            android:ems="10"
+            android:hint="0.0"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal|numberSigned"
+            android:textAlignment="center" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chiffreDaffaire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingEnd="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/textView_CA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Chiffre d'affaire :"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTxt_CA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:ems="10"
+            android:hint="0.0"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal|numberSigned"
+            android:maxLength="16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <Button
+            android:id="@+id/button_total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="#42d1f4"
+            android:onClick="calculate_Total"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="Calculer Total à rendre" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/textView_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="A rendre :"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:background="#00000000"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:contentDescription="sendMail"
+        android:elevation="1dp"
+        android:onClick="sendMail"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_dialog_email"
+        android:tint="#4286f4"
+        android:tintMode="src_in"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        tools:backgroundTint="?attr/colorAccent" />
+
+</LinearLayout>

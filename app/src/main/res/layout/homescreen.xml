@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topSection"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:background="#E4210F"
+            android:gravity="center"
+            android:text="BIIIM"
+            android:textColor="#ffffff"
+            android:textSize="70sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/middleSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="200dp">
+
+        <ImageButton
+            android:id="@+id/button_Caisse"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="#00000000"
+            android:contentDescription="caisse"
+            android:contextClickable="true"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_caisse"
+            android:onClick="openAcitivty_caisse"/>
+
+        <Button
+            android:id="@+id/button_BL"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+
+            android:background="@drawable/shape"
+            android:text="BL"
+            android:textColor="#ffffff"
+            android:textSize="100sp"
+            android:onClick="openAcitivty_bl"/>
+
+        <ImageButton
+            android:id="@+id/button_Commandes"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="#00000000"
+            android:contentDescription="COMMANDES"
+            android:elevation="0dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_cart"
+            android:onClick="openAcitivty_commandes"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/textSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_caisse"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="Caisse"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_bl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="BL"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_commandes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Commandes"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
